@@ -86,14 +86,16 @@ internal final class WebPresenter {
     func handle(error: AuthError) {
         VK.Log.put("WebPresenter", "handle \(error)")
 
-        if fails <= 3 {
-            self.error = error
-            fails += 1
-            controller.load(url: "")
-        }
-        else {
-            controller.hide()
-        }
+        self.error = error
+        controller.hide()
+//        if fails <= 3 {
+//            self.error = error
+//            fails += 1
+//            controller.load(url: "")
+//        }
+//        else {
+//            controller.hide()
+//        }
     }
 
 
