@@ -63,7 +63,7 @@
             VK.Log.put("WebController", "load \(urlStr)")
             
             DispatchQueue.main.sync {
-                self.webView?.loadRequest(URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10))
+                self.webView?.loadRequest(URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 30))
             }
         }
         
